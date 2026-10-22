@@ -1,0 +1,27 @@
+[bus]
+bitrate = 500000
+request_id = 0x7E0
+response_id = 0x7E8
+mode = "virtual"
+# channel = "1"   # optional: number from --list-channels
+
+[vehicle]
+vin = "1HGCM82633A004352"
+calid = "OBD2EMU-CAL-0001"
+
+[live]
+engine_rpm = 800.0
+vehicle_speed_kph = 0.0
+coolant_c = 90.0
+throttle_pct = 0.0
+mil_on = false
+dtc_count = 0
+
+# Optional demo DTCs (Mode $03). Uncomment to start with codes stored.
+# [[diagnostics.dtc]]
+# code = "P0301"
+# description = "Cylinder 1 Misfire"
+#
+# [[diagnostics.dtc]]
+# code = "P0420"
+# description = "Catalyst System Efficiency Below Threshold"

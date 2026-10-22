@@ -1,0 +1,1 @@
+"""NiceGUI localhost UI."""

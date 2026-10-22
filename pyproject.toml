@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "obd2-emulator"
+version = "0.1.0"
+description = "SAE J1979 / OBD-II light-vehicle ECU emulator (python-can + can-isotp)"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "python-can[gs-usb,serial]>=4.3",
+  "python-can-candle>=1.2",
+  "can-isotp>=2.0",
+  "nicegui>=2.0",
+  "libusb-package>=1.0",
+  "pyserial>=3.5",
+  "pywin32>=306; sys_platform == 'win32'",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+obd2-emulator = "obd2_emulator.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["obd2_emulator*"]
